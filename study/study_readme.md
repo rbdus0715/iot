@@ -27,3 +27,19 @@ pinMode(PIN, OUTPUT or INPUT);
 digitalWrite(PIN, HIGHT or LOW);
 analogWrite(PIN, 0~255);
 ```
+**LED 깜빡이기**
+GND는 (-) 전원을 입력받는 곳이며 그라운드라고 함. 그라운드에는 0V의 전압이 있음.
+```c++
+int led = 13;
+
+void setup() {
+  pinMode(led, OUTPUT); 
+}
+
+void loop() {
+  digitalWrite(led, HIGH);
+  delay(1000);
+  digitalWrite(led, LOW);
+  delay(1000);
+}
+```
