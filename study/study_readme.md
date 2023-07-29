@@ -196,7 +196,7 @@ void loop() {
 
 **초음파 센서와 LED on/off**
 </br>
-<img src="https://github.com/rbdus0715/iot/assets/85426187/736df437-7ff4-4b3c-ae58-362cc1cc5ee" width="400"/>
+<img src="https://github.com/rbdus0715/iot/assets/85426187/910a0f06-da61-4915-8890-c926ce718d8b" width="400"/>
 </br>
 
 ```c++
