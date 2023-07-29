@@ -158,6 +158,7 @@ else {
 </br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/d52f1212-a1a6-4673-8d09-1d61f5f75ad4" width="400"/>
 </br>
+
 ```c++
 int echo = 12;
 int trig = 13;
@@ -183,4 +184,5 @@ void loop() {
   delay(500);
 }
 ```
+
 
