@@ -27,6 +27,7 @@ pinMode(PIN, OUTPUT or INPUT);
 digitalWrite(PIN, HIGHT or LOW);
 analogWrite(PIN, 0~255);
 ```
+
 **LED 깜빡이기**
 GND는 (-) 전원을 입력받는 곳이며 그라운드라고 함. 그라운드에는 0V의 전압이 있음.
 ```c++
@@ -43,3 +44,25 @@ void loop() {
   delay(1000);
 }
 ```
+
+**LED 여러개 순차적으로 켜기**
+```c++
+void setup() {
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(12, HIGH);
+  delay(1000);
+  digitalWrite(11, HIGH);
+  delay(1000);
+}
+```
+
+**digitalWrite vs analogWrite**
+digital은 0과 1로밖에 표현되지 않아 껐다 키는 동작밖에 구현하지 못한다.
+반면에 analog는 0부터 255까지의 값을 표현할 수 있어 연속된 동작을 구현할 수 있다.
