@@ -105,3 +105,27 @@ pinMode(tact, INPUT_PULLUP); // 이걸로 수정
 </br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/62207f89-bea4-4f06-b772-35d351677f9c" width="400"/></br>
 코드는 풀업과 같다.
+
+# 4. psd 센서(적외선)로 거리 측정하기
+</br>
+<img src="https://github.com/rbdus0715/iot/assets/85426187/12de143e-9610-4ab3-95f7-1e4a0cfe9350" width="400"/></br>
+
+```c++
+int psd = A0;
+int distance = 0;
+
+void setup() {
+  pinMode(psd, INPUT); // 센서는 input 모드
+  Serial.begin(9600);
+}
+
+void loop() {
+  int psd_check = analogRead(psd);
+  // Serial.println(psd_check);
+  int volt = map(psd_check, 0, 1023, 0, 5000); // psd_check 불러온 0에서 1023의 값을 0~5000 비율로 계산하여 매핑
+  distance = (21.61 / (volt - 0.1696)*1000; // 거리를 구하는 공식
+  Serial.print(distance);
+  Serial.println("cm");
+  delay(500);
+}
+```
