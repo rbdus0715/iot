@@ -1,5 +1,9 @@
+# 목차
 [1.base](#BASE)
-[2.led](#2.LED)
+[2.LED](#LED)
+[3.tact 스위치와 풀업/다운 저항](#tact-스위치와-풀업/다운-저항)
+[4.psd 센서](#psd-센서)
+[5.초음파 센서](#초음파-센서)
 
 # BASE
 ```c++
@@ -20,7 +24,7 @@ void loop()
 **저항**</br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/f5ef4a23-dca4-4800-815a-3cdddb0481d7" width="400"/>
 
-# 2.LED
+# LED
 **LED** : 다리가 긴 쪽이 (+) 짧은 쪽이 (-)</br>
 ![image](https://github.com/rbdus0715/iot/assets/85426187/8499b3c4-c5f6-43b7-bb5b-6b8e7e26c998)
 
@@ -71,7 +75,7 @@ void loop() {
 digital은 0과 1로밖에 표현되지 않아 껐다 키는 동작밖에 구현하지 못한다.
 반면에 analog는 0부터 255까지의 값을 표현할 수 있어 연속된 동작을 구현할 수 있다.
 
-# 3.tact 스위치와 풀업/다운 저항
+# tact 스위치와 풀업/다운 저항
 ![image](https://github.com/rbdus0715/iot/assets/85426187/243253d9-eddb-4c37-9a1c-93d6d1f3ca1c)
 - 풀업 저항 : 스위치를 누르지 않았을 때 전류가 흐른다.
 - 풀다운 저항 : 스위치를 눌렀을 때 전류가 흐른다.
@@ -109,7 +113,7 @@ pinMode(tact, INPUT_PULLUP); // 이걸로 수정
 <img src="https://github.com/rbdus0715/iot/assets/85426187/62207f89-bea4-4f06-b772-35d351677f9c" width="400"/></br>
 코드는 풀업과 같다.
 
-# 4.psd 센서(적외선)
+# psd 센서(적외선)
 **거리 측정**
 </br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/12de143e-9610-4ab3-95f7-1e4a0cfe9350" width="400"/>
@@ -152,7 +156,7 @@ else {
 }
 ```
 
-# 5.초음파 센서
+# 초음파 센서
 - 20kHz 이상의 높은 주파수를 보낸 후 반사되어 오는 시간차로 거리 측정
 - 구성 : 초음파가 나오는 트리거(trig)와 초음파를 받는 에코(echo)
 - 핀맵 : 왼쪽부터 VCC, TRIG, ECHO, GND 이다.
