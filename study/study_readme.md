@@ -162,6 +162,8 @@ else {
 - 핀맵 : 왼쪽부터 VCC, TRIG, ECHO, GND 이다.
 - 전압 전류 : 5V, 15mA
 - 거리를 측정하기 위해서 340 * (초음파가 물체로부터 반사되어 돌아오는 시간) / 10000 / 2 (편도) 를 계산한다.
+
+**초음파 센서로 거리 측정**
 </br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/d52f1212-a1a6-4673-8d09-1d61f5f75ad4" width="400"/>
 </br>
@@ -192,4 +194,45 @@ void loop() {
 }
 ```
 
+**초음파 센서와 LED on/off**
+</br>
+<img src="https://github.com/rbdus0715/iot/assets/85426187/736df437-7ff4-4b3c-ae58-362cc1cc5ee" width="400"/>
+</br>
 
+```c++
+int echo = 12;
+int trig = 13;
+int led = 11;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(echo, INPUT);
+  pinMode(trig, OUTPUT);
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  float duration, distance;
+ 
+  digitalWrite(trig, HIGH);
+  delay(10);
+  digitalWrite(trig, LOW);
+  
+  duration = pulseIn(echo, HIGH);
+  distance = ((float)(340*duration) / 10000) / 2;
+  
+  Serial.print(distance);
+  Serial.println("cm");
+  
+  if(distance <= 15) {
+  	digitalWrite(led, HIGH);
+    Serial.println("led on");
+  }
+  else {
+  	digitalWrite(led, LOW);
+    Serial.println("led off");
+  }
+  
+  delay(500);
+}
+```
