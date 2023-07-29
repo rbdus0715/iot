@@ -1,7 +1,7 @@
 [1.base](1.-BASE)
 [2.led](2.-LED)
 
-# 1. BASE
+#1. BASE
 ```c++
 // 전처리
 int var;
