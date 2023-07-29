@@ -1,4 +1,4 @@
-# 1. base
+# 1. BASE
 ```c++
 // 전처리
 int var;
@@ -106,10 +106,12 @@ pinMode(tact, INPUT_PULLUP); // 이걸로 수정
 <img src="https://github.com/rbdus0715/iot/assets/85426187/62207f89-bea4-4f06-b772-35d351677f9c" width="400"/></br>
 코드는 풀업과 같다.
 
-# 4. psd 센서(적외선)로 거리 측정하기
+# 4. psd 센서(적외선)
+**거리 측정**
 </br>
-<img src="https://github.com/rbdus0715/iot/assets/85426187/12de143e-9610-4ab3-95f7-1e4a0cfe9350" width="400"/></br>
-
+<img src="https://github.com/rbdus0715/iot/assets/85426187/12de143e-9610-4ab3-95f7-1e4a0cfe9350" width="400"/>
+</br>
+왼쪽부터 A0, GND, 5V
 ```c++
 int psd = A0;
 int distance = 0;
@@ -129,3 +131,30 @@ void loop() {
   delay(500);
 }
 ```
+**psd 센서를 이용한 LED on/off**
+</br>
+<img src="https://github.com/rbdus0715/iot/assets/85426187/4576d5ea-7273-4f73-b2f2-e41d2e9847dc" width="400"/>
+</br>
+```c++
+// 전처리 코드 추가
+int led = 13;
+// setup 코드 추가
+pinMode(led, OUTPUT);
+// loop 코드 추가
+if(distance <= 15) {
+  digitalWrite(led, HIGH);
+}
+else {
+    digitalWrite(led, LOW);
+}
+```
+
+# 5. 초음파 센서
+- 20kHz 이상의 높은 주파수를 보낸 후 반사되어 오는 시간차로 거리 측정
+- 구성 : 초음파가 나오는 트리거(trig)와 초음파를 받는 에코(echo)
+- 핀맵 : 왼쪽부터 VCC, TRIG, ECHO, GND 이다.
+- 전압 전류 : 5V, 15mA
+- 거리를 측정하기 위해서 340 * (초음파가 물체로부터 반사되어 돌아오는 시간) / 10000 / 2 (편도) 를 계산한다.
+
+
+
