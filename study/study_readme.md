@@ -1,7 +1,7 @@
 # base
 우노보드 구조</br>
 디지털 신호는 read write를 모두 할 수 있지만 아날로그 신호는 read 만 한다.
-![image](https://github.com/rbdus0715/iot/assets/85426187/253febd7-aeb7-4760-9c3e-867f01f0e881){: width="10" height="10"}
+<img src="https://github.com/rbdus0715/iot/assets/85426187/253febd7-aeb7-4760-9c3e-867f01f0e881" width="600"/>
 
 빵판 - 같은 선으로 연결된 부분들은 같은 전극을 띈다.
 ![image](https://github.com/rbdus0715/iot/assets/85426187/04345236-f7bd-4206-a62d-681fd39b0f5d)
