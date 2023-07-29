@@ -73,7 +73,8 @@ digital은 0과 1로밖에 표현되지 않아 껐다 키는 동작밖에 구현
 - 풀업 저항 : 스위치를 누르지 않았을 때 전류가 흐른다.
 - 풀다운 저항 : 스위치를 눌렀을 때 전류가 흐른다.
 
-**풀업저항 예시**</br>
+**풀업저항 예시**
+</br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/999f1fbf-7fc3-4a4f-8eba-e959fceb46ab" width="400"/>
 ```c++
 int led = 13; // 아두이노 내부 저항은 13번 핀에 연결되어있다. 13번 핀에 led를 연결하지 않아도 내부 LED가 작동한다.
@@ -100,6 +101,7 @@ pinMode(tact, INPUT_PULLUP); // 이걸로 수정
 ...
 ```
 
-**풀 다운 저항**</br>
+**풀 다운 저항**
+</br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/62207f89-bea4-4f06-b772-35d351677f9c" width="400"/></br>
 코드는 풀업과 같다.
