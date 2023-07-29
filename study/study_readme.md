@@ -1,4 +1,4 @@
-# base
+# 1. base
 ```c++
 // 전처리
 int var;
@@ -17,6 +17,7 @@ void loop()
 **저항**</br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/f5ef4a23-dca4-4800-815a-3cdddb0481d7" width="400"/>
 
+# 2. LED
 **LED** : 다리가 긴 쪽이 (+) 짧은 쪽이 (-)</br>
 ![image](https://github.com/rbdus0715/iot/assets/85426187/8499b3c4-c5f6-43b7-bb5b-6b8e7e26c998)
 
@@ -66,3 +67,5 @@ void loop() {
 **digitalWrite vs analogWrite**
 digital은 0과 1로밖에 표현되지 않아 껐다 키는 동작밖에 구현하지 못한다.
 반면에 analog는 0부터 255까지의 값을 표현할 수 있어 연속된 동작을 구현할 수 있다.
+
+# tact 스위치와 풀업/다운 저항
