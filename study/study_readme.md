@@ -76,7 +76,7 @@ digital은 0과 1로밖에 표현되지 않아 껐다 키는 동작밖에 구현
 **풀업저항 예시**</br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/999f1fbf-7fc3-4a4f-8eba-e959fceb46ab" width="400"/>
 ```c++
-int led = 13;
+int led = 13; // 아두이노 내부 저항은 13번 핀에 연결되어있다. 13번 핀에 led를 연결하지 않아도 내부 LED가 작동한다.
 int tact = 2;
 int tact_state;
 
