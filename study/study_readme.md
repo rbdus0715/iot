@@ -68,4 +68,34 @@ void loop() {
 digital은 0과 1로밖에 표현되지 않아 껐다 키는 동작밖에 구현하지 못한다.
 반면에 analog는 0부터 255까지의 값을 표현할 수 있어 연속된 동작을 구현할 수 있다.
 
-# tact 스위치와 풀업/다운 저항
+# 3. tact 스위치와 풀업/다운 저항
+![image](https://github.com/rbdus0715/iot/assets/85426187/243253d9-eddb-4c37-9a1c-93d6d1f3ca1c)
+- 풀업 저항 : 스위치를 누르지 않았을 때 전류가 흐른다.
+- 풀다운 저항 : 스위치를 눌렀을 때 전류가 흐른다.
+
+**풀업저항 예시**</br>
+<img src="https://github.com/rbdus0715/iot/assets/85426187/999f1fbf-7fc3-4a4f-8eba-e959fceb46ab" width="400"/>
+```c++
+int led = 13;
+int tact = 2;
+int tact_state;
+
+void setup() {
+  pinMode(led, OUTPUT);
+  pinMode(tact, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  tact_state = digitalRead(tact);
+  Serial.println(tact_state);
+  digitalWrite(led, tact_state);
+}
+```
+
+**내부 풀업 저항 사용하기**
+```c++
+...
+pinMode(tact, INPUT_PULLUP); // 이걸로 수정
+...
+```
