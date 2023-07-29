@@ -99,3 +99,7 @@ void loop() {
 pinMode(tact, INPUT_PULLUP); // 이걸로 수정
 ...
 ```
+
+**풀 다운 저항**</br>
+<img src="https://github.com/rbdus0715/iot/assets/85426187/62207f89-bea4-4f06-b772-35d351677f9c" width="400"/></br>
+코드는 풀업과 같다.
