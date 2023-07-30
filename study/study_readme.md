@@ -4,8 +4,8 @@
 [3.tact 스위치와 풀업/다운 저항](#tact-스위치와-풀업/다운-저항)</br>
 [4.psd 센서](#psd-센서)</br>
 [5.초음파 센서](#초음파-센서)</br>
-[6. 수분 수위 센서](#수분-수위-센서)
-[7. 기울기 센서](#기울기-센서)
+[6. 수분 수위 센서](#수분-수위-센서)</br>
+[7. 기울기 센서](#기울기-센서)</br>
 
 # BASE
 ```c++
@@ -240,6 +240,25 @@ void loop() {
 ```
 
 # 수분 수위 센서
+- S : A0
+- (+) : 5V
+- (-) : GND
+```c++
+int sig = A0;
+int led = 13;
+int height;
 
+void setup() {
+  Serial.begin(9600);
+  pinMode(sig, INPUT);
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  height = analogRead(sig);
+  Serial.println(height);
+  delay(100);
+}
+```
 
 # 기울기 센서
