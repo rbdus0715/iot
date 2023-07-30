@@ -2,7 +2,7 @@
 [1.base](#BASE)</br>
 [2.LED](#LED)</br>
 [3.tact 스위치와 풀업/다운 저항](#tact-스위치와-풀업/다운-저항)</br>
-[4.psd 센서](#psd-센서(적외선))</br>
+[4.psd 센서](#psd-센서)</br>
 [5.초음파 센서](#초음파-센서)</br>
 [6. 수분 수위 센서](#수분-수위-센서)</br>
 [7. 기울기 센서](#기울기-센서)</br>
@@ -116,7 +116,7 @@ pinMode(tact, INPUT_PULLUP); // 이걸로 수정
 <img src="https://github.com/rbdus0715/iot/assets/85426187/62207f89-bea4-4f06-b772-35d351677f9c" width="400"/></br>
 코드는 풀업과 같다.
 
-# psd 센서(적외선)
+# psd 센서
 **거리 측정**
 </br>
 <img src="https://github.com/rbdus0715/iot/assets/85426187/12de143e-9610-4ab3-95f7-1e4a0cfe9350" width="400"/>
@@ -302,4 +302,5 @@ void loop() {
   delay(100);
 }
 ```
+
 # IR 센서 (적외선)
