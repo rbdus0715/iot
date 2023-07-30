@@ -6,6 +6,7 @@
 [5.초음파 센서](#초음파-센서)</br>
 [6. 수분 수위 센서](#수분-수위-센서)</br>
 [7. 기울기 센서](#기울기-센서)</br>
+[8. 조도 센서](#조도-센서)</br>
 
 # BASE
 ```c++
@@ -245,13 +246,11 @@ void loop() {
 - (-) : GND
 ```c++
 int sig = A0;
-int led = 13;
 int height;
 
 void setup() {
   Serial.begin(9600);
   pinMode(sig, INPUT);
-  pinMode(led, OUTPUT);
 }
 
 void loop() {
@@ -262,3 +261,24 @@ void loop() {
 ```
 
 # 기울기 센서
+</br>
+<img src="https://github.com/rbdus0715/iot/assets/85426187/06a48c6d-c7bd-4350-96a8-11e6d21bd972" width="400"/>
+</br>
+풀업풀다운 저항을 이용
+
+```c++
+int tilt = 8;
+
+void setup() {
+  pinMode(tilt, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int value = digitalRead(tilt);
+  Serial.println(value);
+  delay(100);
+}
+```
+
+# 조도 센서
