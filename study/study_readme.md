@@ -282,3 +282,24 @@ void loop() {
 ```
 
 # 조도 센서
+조도센서(photo resistor)는 주변 밝기를 측정하는 센서다. 조도 센서에는 극성은 없으나 빛의 양에 따라 전도율이 변함.</br>
+빛의 양이 많아지면 전도율이 높아져 저항이 낮아진다. 하지만 전도율에 비례해 선형적으로 증가하는 것이 아니어서 대략적인 밝고 어두움만을 측정한다.
+</br>
+<img src="https://github.com/rbdus0715/iot/assets/85426187/8a15a10f-36cb-48e1-a450-eef9b870d943" width="400"/>
+</br>
+
+```c++
+int bright = A0;
+
+void setup() {
+  pinMode(bright, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int value = analogRead(bright);
+  Serial.println(value);
+  delay(100);
+}
+```
+# IR 센서 (적외선)
